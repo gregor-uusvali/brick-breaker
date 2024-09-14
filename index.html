@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <script src="/static/js/index.js" type="module"></script>
+    <title>Arkanoid</title>
+  </head>
+  <body>
+    <div id="fps"></div>
+    <div id="numPlayers"></div>
+    <div id="scoreBoard">
+      <table>
+        <caption>
+          ScoreBoard
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col" style="width: 10%"></th>
+            <th scope="col" data-column="name" style="width: 50%">Name</th>
+            <th scope="col" data-column="score" style="width: 20%">Score</th>
+            <th scope="col" data-column="time" style="width: 20%">Time</th>
+          </tr>
+        </thead>
+        <tbody id="data"></tbody>
+      </table>
+      <ul class="pagination">
+        <li>
+          <button class="button-30" id="prevBtn">&lt Prev</button>
+        </li>
+        <li>
+          <button class="button-30" id="nextBtn">Next &gt</button>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div id="gameStats">
+        <p id="timer">00:00</p>
+        <div style="display: flex">
+          <p>Score:</p>
+          <p id="score">0</p>
+        </div>
+        <p id="lives">Lives:5</p>
+      </div>
+      <div id="game-area" class="game-area">
+        <h1 id="game-over">Game Over</h1>
+        <div id="pause-screen">
+          <h1>Paused</h1>
+          <h3 id="restart-btn">Restart</h3>
+          <h3 id="sfx-btn">SFX ON</h3>
+          <h3 id="music-btn">Music ON</h3>
+        </div>
+        <div id="story">
+          <p>
+            You are a paddle, living your life in the vibrant, digital world of
+            Ankaroid. Breaking bricks is your favourite pastime, and you spend
+            hours every day honing your skills. You take pride in your ability
+            to control the ball with precision, hitting each brick with just the
+            right amount of force. You dream of one day becoming the greatest
+            brick-breaker of all time.
+          </p>
+        </div>
+        <div id="start-btn">
+          <h1>Start</h1>
+        </div>
+        <div id="bricks" class="bricks"></div>
+        <div id="ball" class="ball"></div>
+        <div id="paddle" class="paddle"></div>
+        <div id="userinfo">
+          <div>
+            <label>Please enter your name</label>
+            <input id="name" type="text" name="name" autocomplete="off" />
+          </div>
+          <div id="userinfoBtn">Submit</div>
+        </div>
+      </div>
+      <div id="controls">
+        <p>Arrows - left/right | Space - shoot ball | P - pause</p>
+      </div>
+    </div>
+  </body>
+</html>
